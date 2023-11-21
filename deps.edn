@@ -1,5 +1,5 @@
 {:paths ["src" "resources"]
- :deps {org.clojure/clojure {:mvn/version "1.11.1"} ring/ring-core {:mvn/version "1.10.0"} ring/ring-jetty-adapter {:mvn/version "1.10.0"} integrant/integrant {:mvn/version "0.8.1"} integrant/repl {:mvn/version "0.3.3"}}
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"} ring/ring-core {:mvn/version "1.10.0"} ring/ring-jetty-adapter {:mvn/version "1.10.0"} integrant/integrant {:mvn/version "0.8.1"} integrant/repl {:mvn/version "0.3.3"} metosin/reitit {:mvn/version "0.6.0"} metosin/reitit-ring {:mvn/version "0.6.0"}}
  :aliases
  {:run-m {:main-opts ["-m" "practice-log.practice-log"]}
   :run-x {:ns-default practice-log.practice-log

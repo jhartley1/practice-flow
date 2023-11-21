@@ -1,8 +1,9 @@
 (ns practice-log.system
-  (:require [ring.adapter.jetty :as jetty] [integrant.core :as ig]))
+  (:require [ring.adapter.jetty :as jetty] 
+            [integrant.core :as ig] 
+            [practice-log.handler :refer handler]))
 
-(defn handler [request]
-  {:status 200 :header {"Content-Type" "text/html"} :body "Hello, Josh"})
+(def config {:adapter/jetty {:port 3000 :join? false}})
 
 (defmethod ig/init-key :adapter/jetty [_ {:keys [port join?]}]
   (jetty/run-jetty handler {:port port :join? join?}))

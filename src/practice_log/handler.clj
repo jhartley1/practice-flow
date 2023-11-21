@@ -1,4 +1,10 @@
-(ns practice-log.handler (:require [ring.util.response :refer [response]]))
+(ns practice-log.handler
+  (:require [reitit.ring :as ring]
+            [ring.util.response :refer [response]]))
 
-(defn handler [request]
-  {:status 200 :header {"Content-Type" "text/html"} :body "Hello, Josh"})
+(defn get-entry-by-id [] (response "Hello, World!"))
+
+(def router (ring/router [["/entry"
+                           ["/:id" {:get get-entry-by-id}]]]))
+
+(def handler (ring/ring-handler router))
