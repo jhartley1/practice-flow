@@ -1,7 +1,8 @@
 (ns practice-log.system
   (:require [ring.adapter.jetty :as jetty] 
             [integrant.core :as ig] 
-            [practice-log.handler :refer handler]))
+            [practice-log.handler :refer [handler]]
+            ))
 
 (def config {:adapter/jetty {:port 3000 :join? false}})
 
