@@ -7,10 +7,10 @@
 (set-refresh-dirs "src")
 
 (repl/set-prep! 
- #(ig/prep {:adapter/jetty {:port 3000 :join? false}}))
+ #(ig/prep system/config))
 
 (comment
-  (repl/go)
+  (repl/go)  
 
   (repl/reset)
   
