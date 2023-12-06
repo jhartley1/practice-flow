@@ -50,9 +50,11 @@ Run that uberjar:
 
     $ java -jar target/net.clojars.practice-log/practice-log-0.1.0-SNAPSHOT.jar
 
-## Options
+## Development
 
-FIXME: listing of options this app accepts.
+Add a dependency
+
+    neil dep add hiccup
 
 ## Examples
 
